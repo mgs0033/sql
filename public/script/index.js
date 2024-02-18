@@ -11,7 +11,6 @@ $(document).ready(function() {
                     <p>Descripcióndel curso: ${curso.descripcion}</p>
                     <p>Fecha en la que se empezo a impartir: ${curso.fecha_importacion}</p>
                     <p>Instituto en el que se imparte: ${curso.lugar}</p>
-                    <button onclick="mostrarAlumnos(${curso.idCurso})">Curso ${curso.idCurso} </button>`
 
                 );
                 $("#cursos").append(cursoDiv);
@@ -22,6 +21,3 @@ $(document).ready(function() {
         }
     });
 });
-function mostrarAlumnos(idCurso) {
-    window.location.href = `/alumnos/${idCurso}`;
-}
