@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modificar Curso</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h1>Modificar Curso</h1>
+  <li><a href="/">Cursos</a></li>
+  <li><a href="/centros">Centros</a></li>
+  <li><a href="/alumnos">Alumnos</a></li>
+  <li><a href="/graficos">Gráficos</a></li>
+  <li><a href="/modificar">Modificar Cursos</a></li>
+  <label for="selectCurso">Selecciona un curso:</label>
+  <select id="selectCurso">
+    <!-- Opciones de cursos se cargarán dinámicamente con JavaScript -->
+  </select>
+  <br><br>
+  <form id="formularioCurso">
+    <label for="nombreCurso">Nombre del Curso:</label><br>
+    <input type="text" id="nombreCurso" name="nombreCurso"><br><br>
+    <label for="nivelCurso">Nivel del Curso:</label><br>
+    <input type="number" id="nivelCurso" name="nivelCurso"><br><br>
+    <label for="descripcionCurso">Descripción del Curso:</label><br>
+    <input type="text" id="descripcionCurso" name="descripcionCurso"><br><br>
+    <label for="fechaCurso">Fecha de Importación del Curso:</label><br>
+    <input type="date" id="fechaCurso" name="fechaCurso"><br><br>
+    <label for="lugarCurso">Lugar donde se imparte el Curso:</label><br>
+    <input type="text" id="lugarCurso" name="lugarCurso"><br><br>
+    <button type="button" id="actualizarCurso">Actualizar Curso</button>
+  </form>
+
+  <script src="modificar.js"></script>
+</body>
+</html>

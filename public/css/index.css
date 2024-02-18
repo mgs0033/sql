@@ -1,0 +1,37 @@
+#cursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.curso {
+    flex: 1 0 200px; /* Tamaño inicial, crecimiento y contracción */
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-sizing: border-box; /* Incluye relleno y borde en el tamaño */
+}
+
+/* Estilo para los elementos <li> */
+li {
+    list-style-type: none; /* Elimina los estilos de lista predeterminados */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para los enlaces dentro de los elementos <li> */
+li a {
+    display: block; /* Hace que los enlaces ocupen todo el espacio del elemento <li> */
+    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+    color: #333; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+/* Estilo para cambiar el color de fondo cuando se pasa el ratón por encima del enlace */
+li a:hover {
+    background-color: #f0f0f0; /* Color de fondo al pasar el ratón */
+}

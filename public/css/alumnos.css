@@ -1,0 +1,52 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para el contenedor de la lista de alumnos */
+  #alumnosLista {
+    padding: 20px;
+    display: flex; /* Utiliza flexbox */
+    flex-wrap: wrap; /* Envuelve los elementos en filas y columnas */
+    justify-content: space-between; /* Distribuye los elementos de manera uniforme */
+  }
+  
+  /* Estilos para los divs individuales de cada alumno */
+  .alumno {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: calc(33.33% - 40px); /* Ancho del div de cada alumno */
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+  }
+  
+  /* Estilos para los párrafos de información del alumno */
+  .alumno p {
+    margin: 5px 0;
+  }
+  
+  /* Estilos para hacer que los divs ocupen toda la pantalla */
+  @media screen and (max-width: 768px) {
+    #alumnosLista {
+      padding: 10px;
+    }
+    .alumno {
+      width: calc(50% - 40px); /* Ancho del div de cada alumno en pantallas más pequeñas */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .alumno {
+      width: calc(100% - 40px); /* Ancho del div de cada alumno en pantallas aún más pequeñas */
+    }
+  }
+  

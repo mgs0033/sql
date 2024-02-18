@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Información de Alumnos</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/alumnos.css">
+  <script src="script/alumnos.js"></script>
+</head>
+<!-- alumnos.html -->
+
+<body>
+  <li><a href="/">Cursos</a></li>
+  <li><a href="/centros">Centros</a></li>
+  <li><a href="/alumnos">Alumnos</a></li>
+  <li><a href="/graficos">Gráficos</a></li>
+  <li><a href="/modificar">Modificar Cursos</a></li>
+    <h1>Información de Alumnos</h1>
+    <div id="alumnosLista">
+      <!-- Aquí se mostrará la lista de alumnos -->
+    </div>
+  
+    <script>
+      function eliminarAlumno(id) {
+        if (confirm('¿Estás seguro de que deseas eliminar este alumno?')) {
+          $.ajax({
+            url: '/eliminarAlumno/' + id,
+            type: 'DELETE',
+            success: function(response) {
+              // Recargar la página después de eliminar el alumno
+              location.reload();
+            },
+            error: function(xhr, status, error) {
+              console.error('Error al eliminar el alumno:', error);
+              alert('Error al eliminar el alumno');
+            }
+          });
+        }
+      }
+    </script>
+  </body>
+  
+</html>
